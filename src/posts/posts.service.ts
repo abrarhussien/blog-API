@@ -1,9 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
+import { InjectModel } from '@nestjs/mongoose';
 
 @Injectable()
 export class PostsService {
+  constructor(@InjectModel("user") private userModel, @InjectModel("post") private postModel){}
+
   create(createPostDto: CreatePostDto) {
     return 'This action adds a new post';
   }
