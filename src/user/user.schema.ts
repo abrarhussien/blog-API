@@ -2,7 +2,8 @@ import * as mongoose from "mongoose"
 export const userModel= new mongoose.Schema({
     userName:{
         type:String,
-        required:true
+        required:true,
+        unique: true
     },
     firstName:{
         type:String
@@ -12,7 +13,8 @@ export const userModel= new mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique: true
     },
     password:{
         type:String,
@@ -29,10 +31,12 @@ export const userModel= new mongoose.Schema({
     },
     image:{
         type:String,
-        required:true,
     },
     date: {
         type: Date,
         default: Date.now
+    },
+    phone:{
+        type:String
     }
 })
