@@ -3,6 +3,7 @@ import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { InjectModel } from '@nestjs/mongoose';
 
+
 @Injectable()
 export class PostsService {
   constructor(@InjectModel("User") private userModel, @InjectModel("Post") private postModel){}

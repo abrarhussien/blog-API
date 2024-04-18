@@ -26,6 +26,7 @@ export class UserController {
   @Get()
   getCurreentUser(@Req() request){
     return request.user
+    
   }
 
 }

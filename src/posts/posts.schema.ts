@@ -15,7 +15,7 @@ export const postModel= new mongoose.Schema({
         type:String,
         required:true,
         minLength: 10,
-        maxLength: 100
+        maxLength: 200
     },
     image:{
         type:String,
